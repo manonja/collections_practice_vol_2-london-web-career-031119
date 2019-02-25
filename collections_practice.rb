@@ -47,16 +47,16 @@ end
 
 def organized_schools(schools)
   location_hash = {}
-  schools.each do |school, location_hash|
-      location_hash.each do |symbol, location|
-        if by_location[location] == nil
-          by_location[location] = [school]
+  schools.each do |school, location|
+      location.each do |symbol, loc|
+        if location_hash[loc] == nil
+          location_hash[loc] = [school]
         else
-          by_location[location] << school
+          location_hash[loc] << school
         end
       end
     end
-    by_location
+    location_hash
 end
 
 
