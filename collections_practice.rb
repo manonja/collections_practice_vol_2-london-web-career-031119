@@ -45,5 +45,7 @@ def find_cool(data)
   data.select {|value| value if value.has_value?("cool")}
 end
 
+def 
+
 
 
